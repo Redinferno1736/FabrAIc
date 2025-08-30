@@ -5,3 +5,8 @@ datasets/
 *.pkl
 
 .env
+
+scripts/ten/
+
+
+
