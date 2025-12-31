@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <form action="/login" method="post">
-        <input type="text" name="username">
-        <input type="password" name="password">
-        <button><a href="{{ url_for('google_login') }}">Sign in with Google</a></button>
-        <button class="primary" type="submit">Submit</button>
-    </form>
+
+    <div class="container">
+        <div class="box">
+            <div class="left">
+                <div class="top">
+                    <div class="h"> FabrAIc </div>
+                    <div class="p"> Welcome back to your style companion </div>
+                </div>
+                <div class="align">
+                    <input type="email" placeholder="Enter email" class="email-input">
+                    <input type="password" placeholder="Enter password" class="email-input">
+                    <button type="sumbit" class="btn1"><b>LOGIN</b></button>
+                </div>
+
+                <div class="continue">
+                    <button type="submit" class="btn2">Continue with Google</button>
+                </div>
+
+                <div class="end">
+                    Don't have an account? <a href="/register">register</a>
+                </div>
+
+            </div>
+
+            <div class="right">
+                <img src="/login_image.jpg" class="align-image">
+            </div>
+        </div>
+    </div>
+    
 </body>
+
 </html>

@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <form action="/register" method="post">
-        <input type="text" name="username">
-        <input type="password" name="password">
-        <input type="password" name="confirm">
-        <button><a href="{{ url_for('google_login') }}">Sign in with Google</a></button>
-        <button class="primary" type="submit">Submit</button>
-    </form>
+
+    <div class="container">
+        <div class="box">
+
+            <div class="left">
+                <img src="/register_image.png" class="align-image">
+            </div>
+
+
+            <div class="right">
+                <div class="top">
+                    <div class="h"> FabrAIc </div>
+                    <div class="p"> Register now and start your style journey </div>
+                </div>
+                <div class="align">
+                    <input type="email" placeholder="Enter email" class="email-input">
+                    <input type="password" placeholder="Enter password" class="email-input">
+                    <input type="password" placeholder="Confirm password" class="email-input">
+                    <button type="sumbit" class="btn1"><b>REGISTER</b></button>
+                </div>
+
+                <div class="continue">
+                    <button type="submit" class="btn2">Continue with Google</button>
+                </div>
+
+                <div class="end">
+                    Already have an account? <a href="/login">login</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
 </body>
+
 </html>
