@@ -14,36 +14,36 @@
 </head>
 
 <body>
+    <form action="/login" method="POST">
+        <div class="container">
+            <div class="box">
+                <div class="left">
+                    <div class="top">
+                        <div class="h"> FabrAIc </div>
+                        <div class="p"> Welcome back to your style companion </div>
+                    </div>
+                    <div class="align">
+                        <input type="email" placeholder="Enter email" name="email" class="email-input">
+                        <input type="password" placeholder="Enter password" name="password" class="email-input">
+                        <button type="sumbit" class="btn1"><b>LOGIN</b></button>
+                    </div>
 
-    <div class="container">
-        <div class="box">
-            <div class="left">
-                <div class="top">
-                    <div class="h"> FabrAIc </div>
-                    <div class="p"> Welcome back to your style companion </div>
+                    <div class="continue">
+                        <a href="/auth/google" class="btn2">Continue with Google</a>
+                    </div>
+
+                    <div class="end">
+                        Don't have an account? <a href="/register">register</a>
+                    </div>
+
                 </div>
-                <div class="align">
-                    <input type="email" placeholder="Enter email" class="email-input">
-                    <input type="password" placeholder="Enter password" class="email-input">
-                    <button type="sumbit" class="btn1"><b>LOGIN</b></button>
+
+                <div class="right">
+                    <img src="/static/assets/login_image.jpg" class="align-image">
                 </div>
-
-                <div class="continue">
-                    <button type="submit" class="btn2">Continue with Google</button>
-                </div>
-
-                <div class="end">
-                    Don't have an account? <a href="/register">register</a>
-                </div>
-
-            </div>
-
-            <div class="right">
-                <img src="/login_image.jpg" class="align-image">
             </div>
         </div>
-    </div>
-    
+    </form>
 </body>
 
 </html>

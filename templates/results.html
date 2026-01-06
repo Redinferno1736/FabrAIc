@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visual Search Results</title>
+    <link rel="stylesheet" href="/static/homepage.css">
+    <style>
+        .results-container { display: flex; gap: 20px; padding: 20px; justify-content: center; }
+        .card { text-align: center; color: white; }
+        img { border-radius: 10px; max-width: 250px; border: 2px solid #fff; }
+    </style>
+</head>
+<body style="background-color: #1a1a1a; font-family: sans-serif;">
+
+    <nav class="navbar">
+        <div class="name">FabrAIc</div>
+        <ul>
+            <li><a href="/home">Home</a></li>
+        </ul>
+    </nav>
+
+    <h1 style="text-align: center; color: white;">Search Results</h1>
+
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #ffd700;">Your Upload</h2>
+        
+        {% if uploaded_file_id %}
+            <img src="{{ url_for('serve_clothes', file_id=uploaded_file_id) }}" width="200">
+        {% elif query_image_b64 %}
+            <img src="data:image/jpeg;base64,{{ query_image_b64 }}" width="200">
+        {% endif %}
+    </div>
+
+    <h2 style="text-align: center; color: white;">Similar Styles from Catalog</h2>
+    <div class="results-container">
+        {% for item in similar_images %}
+        <div class="card">
+            <img src="{{ url_for('serve_dataset_image', filename=item.image_path) }}">
+            <p>Similarity: {{ "%.1f"|format(item.score * 100) }}%</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

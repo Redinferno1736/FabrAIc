@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Clothes</title>
+    <link rel="stylesheet" href="/static/homepage.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="name">FabrAIc</div>
+        <a href="/home">← Back to Home</a>
+    </nav>
+    
+    <div class="upload-container">
+        <h2>Add to Your Wardrobe</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash">{{ messages[0] }}</div>
+            {% endif %}
+        {% endwith %}
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="cloth_image" accept="image/*" required>
+            <button type="submit" class="upload-btn">Upload Clothes</button>
+        </form>
+    </div>
+</body>
+</html>

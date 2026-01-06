@@ -14,40 +14,41 @@
 </head>
 
 <body>
+    <form action="/register" method="POST">
+        <div class="container">
+            <div class="box">
 
-    <div class="container">
-        <div class="box">
+                <div class="left">
+                    <img src="/static/assets/register_image.png" class="align-image">
+                </div>
 
-            <div class="left">
-                <img src="/register_image.png" class="align-image">
+
+                <div class="right">
+                    <div class="top">
+                        <div class="h"> FabrAIc </div>
+                        <div class="p"> Register now and start your style journey </div>
+                    </div>
+                    <div class="align">
+                        <input type="email" placeholder="Enter email" name="email" class="email-input">
+                        <input type="password" placeholder="Enter password" name="password" class="email-input">
+                        <input type="password" placeholder="Confirm password" name="confirm" class="email-input">
+                        <button type="sumbit" class="btn1"><b>REGISTER</b></button>
+                    </div>
+
+                    <div class="continue">
+                        <a href="/auth/google" class="btn2">Continue with Google</a>
+                    </div>
+
+
+                    <div class="end">
+                        Already have an account? <a href="/login">login</a>
+                    </div>
+
+                </div>
+
             </div>
-
-
-            <div class="right">
-                <div class="top">
-                    <div class="h"> FabrAIc </div>
-                    <div class="p"> Register now and start your style journey </div>
-                </div>
-                <div class="align">
-                    <input type="email" placeholder="Enter email" class="email-input">
-                    <input type="password" placeholder="Enter password" class="email-input">
-                    <input type="password" placeholder="Confirm password" class="email-input">
-                    <button type="sumbit" class="btn1"><b>REGISTER</b></button>
-                </div>
-
-                <div class="continue">
-                    <button type="submit" class="btn2">Continue with Google</button>
-                </div>
-
-                <div class="end">
-                    Already have an account? <a href="/login">login</a>
-                </div>
-
-            </div>
-
         </div>
-    </div>
-    
+    </form>
 </body>
 
 </html>

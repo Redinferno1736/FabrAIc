@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F0ECE3;
+}
+
+
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 60%;
+    border-right: 1px solid rgb(86, 81, 81);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.cont_1 {
+    display: flex;
+    width: 60vw;
+    justify-content: end;
+    margin-top: 5vh; 
+}
+
+.box1 {
+    height: 15vh;
+    width: 5vw;
+    background-color: black;
+}
+
+.box2 {
+    position: relative;
+    top: 6vh;
+    left: -3vw;
+    height: 15vh;
+    width: 5vw;
+    background-color: #A9BCB8;
+    z-index: 1;
+}
+
+.cont_2 {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    margin-top: 5vh; 
+}
+
+.rect1 {
+    margin-left: 2vw;
+    height: 5vh;
+    width: 15vw;
+    border: 2px solid black;
+    margin-right: 0.7vw;
+}
+
+.rect2 {
+    height: 5.5vh;
+    width: 5vh;
+    background-color: #A9BCB8;
+    border: 1px solid black;
+}
+
+.cont_3 {
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    margin-bottom: 2vh; 
+}
+
+h1 {
+    font-size: 6rem;
+    font-family: "Racing Sans One";
+}
+
+.cont_4 {
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10 vh; 
+}
+
+.vertical-line {
+    height: 14vh;
+    width: 0.4vw;
+    background-color: black;
+    margin-right: 1vw;
+}
+
+.content > p {
+    font-size: 1.2rem;
+    font-family: "Quicksand";
+}
+
+.cont_5 {
+    display: flex;
+    width: 60vw;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+}
+.login,.register{
+    text-decoration: none;
+    color: inherit;   
+}
+.log-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 10vw;
+    background-color: #A9BCB8;
+    border-radius: 10px;
+}
+
+.log-box>p {
+    text-align: center;
+    padding: 6px 9px 7px 10px;
+    font-family: Lilita One;
+    color: white;
+    font-size: 1.35rem;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.reg-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8.3vh;
+    width: 10vw;
+    background-color: #A9BCB8;
+    border-radius: 10px;
+}
+
+.reg-box>p {
+    text-align: center;
+    padding: 6px 20px 9px 20px;
+    font-family: Lilita One;
+    color: white;
+    font-size: 1.35rem;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.right {
+    width: 40%;
+    /* flex-basis: 40%; */
+    background-image: url(assets/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px 0 0 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.right>p {
+    margin-bottom: 6vh;
+    font-size: 2rem;
+    font-family: "Quintessential";
+}
+
+@media(max-width:600px) {
+    .layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left {
+        align-items: center;
+        width: 100%;
+    }
+
+    .log-box, .reg-box {
+        height: 6vh;
+        width: 20vw;
+    }
+
+    .right {
+        width: 100%;
+        border-radius: 50px 50px 0 0;
+        height : 200px;
+    }
+
+    .box1, .box2 {
+        height: 8vh;
+        width: 10vw;
+    }
+
+    .rect1 {
+        width: 30vw;
+        margin-left: 0;
+    }
+
+    .cont_2 {
+        position: relative;
+        left: -50px;
+    }
+
+}

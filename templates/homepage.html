@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="/static/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="name">FabrAIc</div>
+        <div>
+            <ul>
+                <li><a href="/home" class="selected">Home</a></li>
+                <li></li>
+                <li><a href="/upload" class="add-btn">➕ Add Clothes</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wardrobe-container">
+        <a href="/search" style="color: #060606;">🔍 Find Similar</a>
+        <h2>Your Digital Wardrobe</h2>
+        {% if wardrobe %}
+            <div class="clothes-grid">
+                {% for cloth in wardrobe %}
+                <div class="cloth-item">
+                    <img src="{{ url_for('serve_clothes', file_id=cloth.file_id) }}" 
+                         alt="{{ cloth.filename }}" 
+                         onerror="this.style.display='none'">
+                    <p>{{ cloth.filename }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No clothes in wardrobe yet. <a href="/upload">Add some!</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
