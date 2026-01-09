@@ -1,4 +1,3 @@
-```markdown
 # FabrAIc - AI Outfit Recommendation System ✨
 
 FabrAIc is a full-stack web application that uses deep learning for **fashion image search**, **outfit recommendations**, and **personal wardrobe management**. Users can upload clothes, search for similar styles from a catalog using ResNet50 features, and build a digital wardrobe with MongoDB storage.
@@ -14,44 +13,38 @@ FabrAIc is a full-stack web application that uses deep learning for **fashion im
 ## 🛠 Tech Stack
 
 | Component | Technologies |
-| :--- | :--- |
+|:----------|:-------------|
 | **Backend** | Flask, PyTorch, MongoDB (GridFS), scikit-learn |
 | **Frontend** | HTML/CSS (Tailwind-inspired), Jinja2 templates |
 | **ML** | ResNet50 (pretrained), Cosine Similarity search |
 
 ## 📁 Directory Structure
-
-```text
+```
 redinferno1736-fabraic/
-├── backend.py            # Main Flask app with search engine logic
-├── fashion_model_v1.pth   # Trained ResNet50 model weights
-├── fashion_index_v1.pkl   # Pre-computed search index
+├── backend.py                  # Main Flask app with search engine logic
+├── fashion_model_v1.pth        # Trained ResNet50 model weights
+├── fashion_index_v1.pkl        # Pre-computed search index
 ├── scripts/
-│   └── main.ipynb        # Feature extraction, training, and indexing
-├── static/               # CSS stylesheets and local assets
-└── templates/            # HTML pages (login, search, results, etc.)
-
+│   └── main.ipynb              # Feature extraction, training, and indexing
+├── static/                     # CSS stylesheets and local assets
+└── templates/                  # HTML pages (login, search, results, etc.)
 ```
 
 ## ⚡ Quick Setup & Run
 
 ### 1. Install Dependencies
-
 ```bash
 pip install flask torch torchvision pymongo authlib python-dotenv pillow scikit-learn tqdm
-
 ```
 
 ### 2. Set Environment Variables
 
 Create a `.env` file in the root directory:
-
 ```text
 MONGO_URI=mongodb://localhost:27017/userinfo
 SECRET_KEY=your-secret-key-here
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
-
 ```
 
 ### 3. Place Models in Root
@@ -65,10 +58,8 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 Ensure your `../datasets/` directory contains the required images and index files referenced in the notebooks.
 
 ### 5. Run the Application
-
 ```bash
 python backend.py
-
 ```
 
 Visit `http://localhost:5000`.
@@ -77,7 +68,7 @@ Visit `http://localhost:5000`.
 
 * **Training**: The model is trained on a fashion dataset utilizing categories and attributes from `list_category_cloth.txt` and `list_attr_cloth.txt`.
 * **Index**: Uses 2048-dimensional embeddings (ResNet50 backbone) for catalog images.
-* **Search Flow**: Query  ResNet50 Feature Extraction  Cosine Similarity  Top-K results served from GridFS or disk.
+* **Search Flow**: Query → ResNet50 Feature Extraction → Cosine Similarity → Top-K results served from GridFS or disk.
 
 ## 🎯 Live Demo
 
